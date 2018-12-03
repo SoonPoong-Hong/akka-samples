@@ -6,6 +6,7 @@ import akka.actor.Props
 class HelloWorld extends Actor {
 
   override def preStart(): Unit = {
+    println(s"== preStart $this")
     // create the greeter actor
     val greeter = context.actorOf(Props[Greeter], "greeter")
     // tell it to perform the greeting
