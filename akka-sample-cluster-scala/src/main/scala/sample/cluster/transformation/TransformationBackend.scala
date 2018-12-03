@@ -16,7 +16,7 @@ import com.typesafe.config.ConfigFactory
 
 //#backend
 class TransformationBackend extends Actor {
-
+  println(s"== $this")
   val cluster = Cluster(context.system)
 
   // subscribe to cluster changes, MemberUp
